@@ -9,7 +9,7 @@ branches:
 language: go
 
 go:
-  - 1.11.x
+  - 1.12.x
 
 cache:
   directories:
@@ -29,7 +29,7 @@ install:
   - hack/travis-kube-setup.sh
 
 env:
-  - KUBECONFIG=${HOME}/.kube/config PATH=$HOME/k8scli:${PATH} GO111MODULE=on
+  - KUBECONFIG=${HOME}/.kube/config PATH=$HOME/k8scli:${PATH}
 
 before_script:
   - cd ${TRAVIS_BUILD_DIR}
